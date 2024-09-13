@@ -1,8 +1,10 @@
+import Home from "../pages/Home";
+
 export default [
     {
         name: 'home',
         path: '/',
-        component: <h1 className='font-bold text-lg text-center'>Restaurant page home</h1>
+        component: <Home/>
     },
     {
         name:'not-found',
