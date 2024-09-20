@@ -56,7 +56,7 @@ const Restaurant = () => {
            <Menu/>
         </section>
 
-        <section className="sectThree bg-[#FBFBFB] py-[30px]">
+        <section className="sectThree bg-[#FBFBFB]">
             <Contact/>
         </section>
         

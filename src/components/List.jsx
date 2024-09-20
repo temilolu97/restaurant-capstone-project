@@ -55,8 +55,8 @@ const List = () => {
   return (
     <div>
       <div className='flex justify-between gap-1 bg-[#F3F3F3] px-[85px]'>
-                    {listItems.map(listItem => (
-                        <div onClick={()=>handleClick(listItem.item)} className={`flex items-center rounded-full px-[14px] py-[18px] font-semibold hover:bg-[#000] hover:text-white ${activeItem == listItem.item ? 'border bg-[#fc8a06] text-white': ''}`}>{listItem.item}</div>
+                    {listItems.map((listItem, index) => (
+                        <div key={index} onClick={()=>handleClick(listItem.item)} className={`flex items-center rounded-full px-[14px] py-[18px] font-semibold hover:bg-[#000] hover:text-white ${activeItem == listItem.item ? 'border bg-[#fc8a06] text-white': ''}`}>{listItem.item}</div>
                     ))}
                 </div>
     </div>

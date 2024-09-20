@@ -162,19 +162,19 @@ const Menu = () => {
     ])
   return (
     <div className=''>
-      {categories.map(category =>(
-        <div className='py-[30px]'>
+      {categories.map((category, index) =>(
+        <div key={index} className='py-[30px]'>
            <p className='py-4 text-3xl font-bold text-[#FC8A06] active:text-black'>{category}</p>
            <div className="grid grid-cols-3 gap-8">
-            {menus.filter(menu => menu.category == category).map(item => (
-                <div className="flex items-center justify-center rounded-lg border px-5 py-[30px] shadow">
+            {menus.filter(menu => menu.category == category).map((item, idx) => (
+                <div key={idx} className="flex items-center justify-center rounded-lg border px-5 py-[30px] shadow">
                     <div>
                         <p className='text-xl font-bold'>{item.name}</p>
                         <p className=''>{item.content}</p>
                         <p className='text-lg font-bold'>GBP {item.price}</p>
                     </div>
                     <div className='relative'>
-                    <img src={item.image} alt={item.name} className="items-center" />
+                    <img src={item.image} alt={`Image of ${item.name}`} className="items-center" />
                     <div className='absolute bottom-0 right-0 w-fit rounded-tl-3xl bg-white px-4 py-3'>
                         <FaCirclePlus />
                     </div>
